@@ -1,3 +1,0 @@
-SALUT VINCENT
-
-trololol
