@@ -38,8 +38,8 @@ pre {
 
 /*Permet de surligner sur la barre de navigation sur quelle page nous sommes*/
 .active{
-    background-color: #87CEEB;
-    color: white;
+		font-size: 25px;
+		font-weight: bold;
 }
 
 /*Va enlever les marges sur les côtés de la page*/
@@ -53,9 +53,8 @@ body{
     padding: 3%;
     font-size: 30px;
     text-align: center;
-    background-color:white;
+    background-color:#1E90FF;
 		color:black;
-		background-image:url(chien-heureux-dans-lherbe-768x513);
 }
 
 ul{
@@ -63,6 +62,7 @@ ul{
 }
 
 ul {
+	 	font-size:25px;
     list-style-type: none;
     margin: 0;
     padding: 1%;
@@ -83,7 +83,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #87CEEB;
+    font-weight: bold;
 }
 
 
@@ -109,7 +109,7 @@ li a:hover {
 }
 
 .navbar .dropdown-content a:hover {
-    background-color: #87CEEB;
+    font-weight: bold;
 }
 
 /*Disposition basique choix des menus déroulant de certains objets de la liste/barre de navigation*/
