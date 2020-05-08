@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    font-family: "Dyno", "Cycle", Arial, sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Balsamiq Sans", "Dyno", Arial, sans-serif;
+    float: middle;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p,
+pre {
+    font-family: "Cycle", Arial, sans-serif;
+}
+
+h1 {
+    font-style: normal;
+    font-weigth: bold;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: normal;
+    margin: auto;
+}
+
+p {
+    font-style: normal;
+    font-weight: normal;
+}
+
+pre {
+    font-style: italic;
+    font-weight: normal;
+    text-align: left;
+}
+
+
+/*Permet de surligner sur la barre de navigation sur quelle page nous sommes*/
+
+.active {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/*Va enlever les marges sur les côtés de la page*/
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+
+/*Boîte flex CSS contenant le titre en haut de la page et sous titre*/
+
+header {
+    padding: 2%;
+    font-size: 30px;
+    text-align: center;
+    background-color: #1E90FF;
+    color: black;
+}
+
+footer {
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #1E90FF;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+}
+
+ul {
+    background-color: white;
+}
+
+ul {
+    font-size: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    overflow: hidden;
+    background-color: #00BFFF;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    font-weight: bold;
+}
+
+
+/*Disposition des choix des menus déroulant de certains objets de la liste/barre de navigation*/
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/*Présentation des liens des menus déroulant de certains objets de la liste/barre de navigation*/
+
+.navbar .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-color: #00BFFF;
+}
+
+.navbar .dropdown-content a:hover {
+    font-weight: bold;
+}
+
+
+/*Disposition basique choix des menus déroulant de certains objets de la liste/barre de navigation*/
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* balsamiq-sans-regular - latin */
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/BalsamiqSans-Regular.ttf');
+}
+
+
+/* balsamiq-sans-700 - latin */
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/BalsamiqSans-Bold.ttf');
+}
+
+
+/* balsamiq-sans-italic - latin */
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/BalsamiqSans-Italic.ttf');
+}
+
+
+/* balsamiq-sans-700italic - latin */
+
+@font-face {
+    font-family: 'Balsamiq Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/BalsamiqSans-BoldItalic.ttf');
+}
+
+.button {
+    background-color: #2196f3;
+    border-radius: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #0069c0;
+}
+
+.button:active {
+    background-color: #1976d2;
+}
+
+input.button {
+    border: none;
+    cursor: pointer;
+}
+
+.button.warning {
+    background-color: #ff9800;
+}
+
+.button.warning:hover {
+    background-color: #c66900;
+}
+
+.button.warning:active {
+    background-color: #f57c00;
+}
+
+.button.success {
+    background-color: #4caf50;
+}
+
+.button.success:hover {
+    background-color: #087f23;
+}
+
+.button.success:active {
+    background-color: #388e3c;
+}
+
+.error {
+    color: #b71c1c;
+    font-weight: 700;
+    text-align: center;
+}

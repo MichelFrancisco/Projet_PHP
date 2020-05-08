@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons .button {
+    margin-bottom: 20px;
+}
+
+.choixUtilisateur {
+    margin: 30px;
+    padding: 20px;
+}
+
+.choixUtilisateur>h2 {
+    font-family: 'Balsamiq Sans', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

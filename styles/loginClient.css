@@ -1,0 +1,49 @@
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formConnect {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    width: 100%;
+}
+
+.formConnect>form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formConnect>form>input:not(.button) {
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.actions .button {
+    margin-right: 10px;
+}
+
+footer>nom {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+footer>informations {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+#retourAccueil {
+    align-self: center;
+    margin-top: 15px;
+}
