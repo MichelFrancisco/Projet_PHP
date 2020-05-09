@@ -9,8 +9,9 @@
                 <a href="deconnexion.php">Déconnexion</a>
             </div>
         </li>
-        <li><a href="#">Plannifer une consultation</a></li>
+        <li><a href="planificationConsult.php">Planifier une consultation</a></li>
         <li><a href="tarificationClient.php">Tarification</a></li>
+        <li><a href="suiviConsult.php">Suivi de la consultation</a></li>
     </ul>
 </nav>
 <!--Fin de la barre de navigation-->

@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles/global.css">
   <link rel="stylesheet" type="text/css" href="styles/loginClient.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connexion | Ostéopathe Animalier</title>
 </head>
 
@@ -68,6 +69,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
   </main>
 </body>
-<?php include_once('includes/footer.html')?>
+<?php include_once('includes/footer.html') ?>
 
 </html>

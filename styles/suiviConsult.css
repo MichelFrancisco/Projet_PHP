@@ -1,0 +1,16 @@
+.suiviConsultation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.suiviConsultation h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin-top: 20px;
+}

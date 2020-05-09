@@ -151,27 +151,24 @@ INSERT INTO `VACCINATIONS` (`maladies`, `date`, `id_animal`, `id_medicament`) VA
 
 CREATE TABLE `CONSULTATION` (
   `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `type` VARCHAR(15) NOT NULL,
-  `lieu` VARCHAR(30) NOT NULL,
-  `date` DATETIME NOT NULL,
   `duree` INT NOT NULL,
   `anamnese` VARCHAR(1000) NOT NULL,
   `diagnostic` VARCHAR(1000) NOT NULL,
   `manipulation` VARCHAR(1000),
   `suivi` VARCHAR(500) NOT NULL,
   `prix` INT NOT NULL,
-  `id_animal` INT NOT NULL,
-  FOREIGN KEY (`id_animal`) REFERENCES `ANIMAUX_TRAITES`(`id`) ON DELETE CASCADE
+  `id_rendezvous` INT NOT NULL,
+  FOREIGN KEY (`id_rendezvous`) REFERENCES `RENDEZ_VOUS`(`id`) ON DELETE CASCADE
 );
 
 --
 -- Contenu de la table `CONSULTATION`
 --
 
-INSERT INTO `CONSULTATION` (`type`, `lieu`, `date`, `duree`, `anamnese`, `diagnostic`, `manipulation`, `suivi`, `prix`, `id_animal`) VALUES
-('Osthéopathique', 'Cabinet', '2019-12-19 11:30:00', 30, 'Dubsky a du mal a marcher avec sa patte gauche. C''est un problème qui est, à priori, fonctionnel, provenant de sa patte arrière gauche. L''animal a souvent aboyé selon le propriétaire. Le patient attend une manipulation sur l''os de sa patte gauche.', 'Os de la patte gauche déplacé.', 'Replacement de l''os de la patte gauche.', 'Retour sur cabinet pour dans 3 semaines pour consulter l''état du chien.', 40, 1),
-('Homéopathique', 'Chez le propriétaire', '2019-12-20 09:00:00', 15, 'Le chat éternue; tousse et présente des mauvais signes depuis un certain temps, selon son propriétaire. Il attend un qu''on lui fournisse un traitement afin de régler le soucis.', 'les voies respiratoires sont infectées (écoulement des yeux et du nez), le chat éternue, tousse, est fiévreux : c''est une rhinotrachéite.', NULL, 'Traitement numéro 1. Retour du chat en cabinet d''ici 1 semaine.', 25, 2),
-('Homéopathique', 'Cabinet', '2019-12-22 10:00:00', 15, 'Écoulements et éternuements répétitifs du Hamster. Le patient ne comprend pas ce qu''il lui arrive, il indique que cela se produit depuis quelques jours déjà. Il attend un traitement.', 'Le hamster a attrapé froid à la cage thoracique. Il a attrapé un rhume.', NULL, 'Après traitement, revenir dans un mois au cabinet.', 15, 3);
+INSERT INTO `CONSULTATION` (`duree`, `anamnese`, `diagnostic`, `manipulation`, `suivi`, `prix`, `id_rendezvous`) VALUES
+(30, 'Dubsky a du mal a marcher avec sa patte gauche. C''est un problème qui est, à priori, fonctionnel, provenant de sa patte arrière gauche. L''animal a souvent aboyé selon le propriétaire. Le patient attend une manipulation sur l''os de sa patte gauche.', 'Os de la patte gauche déplacé.', 'Replacement de l''os de la patte gauche.', 'Retour sur cabinet pour dans 3 semaines pour consulter l''état du chien.', 40, 1),
+(15, 'Le chat éternue; tousse et présente des mauvais signes depuis un certain temps, selon son propriétaire. Il attend un qu''on lui fournisse un traitement afin de régler le soucis.', 'les voies respiratoires sont infectées (écoulement des yeux et du nez), le chat éternue, tousse, est fiévreux : c''est une rhinotrachéite.', NULL, 'Traitement numéro 1. Retour du chat en cabinet d''ici 1 semaine.', 25, 2),
+(15, 'Écoulements et éternuements répétitifs du Hamster. Le patient ne comprend pas ce qu''il lui arrive, il indique que cela se produit depuis quelques jours déjà. Il attend un traitement.', 'Le hamster a attrapé froid à la cage thoracique. Il a attrapé un rhume.', NULL, 'Après traitement, revenir dans un mois au cabinet.', 15, 3);
 
 -- --------------------------------------------------------
 
@@ -235,17 +232,44 @@ CREATE TABLE `LOGIN` (
   `utilisateur` varchar(255) NOT NULL,
   `motDePasse` varchar(255) NOT NULL,
   `dateInscription` DATETIME NOT NULL,
-  `role` VARCHAR(30) NOT NULL DEFAULT 'user'
+  `role` VARCHAR(30) NOT NULL DEFAULT 'user',
+  `id_particulier` INT,
+  FOREIGN KEY (`id_particulier`) REFERENCES `PARTICULIERS`(`id`) ON DELETE CASCADE
 );
 
 --
 -- Contenu de la table `LOGIN`
 --
 
-INSERT INTO `LOGIN` (`utilisateur`, `motDePasse`, `dateInscription`, `role`) VALUES
-('nicolas8', 'nicolas24', '2020-05-01 12:35:00', 'user'),
-('daktari', 'toto90', '2020-01-01 15:15:00', 'admin');
+INSERT INTO `LOGIN` (`utilisateur`, `motDePasse`, `dateInscription`, `role`, `id_particulier`) VALUES
+('albert8', 'albert24', '2020-05-01 12:35:00', 'user', 1),
+('niska93', 'lacite', '2020-01-01 15:15:00', 'user', 2),
+('donat45', 'jaimeleshaches', '2020-03-07 00:00:00', 'user', 3);
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `RENDEZ_VOUS`
+--
+
+CREATE TABLE `RENDEZ_VOUS` (
+  `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(20) NOT NULL,
+  `lieu` VARCHAR(30) NOT NULL,
+  `date` DATETIME NOT NULL,
+  `id_particulier` INT NOT NULL,
+  `id_animal` INT NOT NULL,
+  FOREIGN KEY (`id_particulier`) REFERENCES `PARTICULIERS`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_animal`) REFERENCES `ANIMAUX_TRAITES`(`id`) ON DELETE CASCADE
+);
+
+--
+-- Contenu de la table `RENDEZ_VOUS`
+--
+INSERT INTO `RENDEZ_VOUS` (`type`, `lieu`, `date`, `id_particulier`, `id_animal`) VALUES
+('Osthéopathique', 'Cabinet', '2019-12-19 11:30:00', 1, 1),
+('Homéopathique', 'Chez le propriétaire', '2019-12-20 09:00:00', 2, 2),
+('Homéopathique', 'Cabinet', '2019-12-22 10:00:00', 3, 3);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    header('Location: loginClient.php', true, 301);
+  header('Location: loginClient.php', true, 301);
 }
 ?>
 
@@ -9,16 +9,17 @@ if (!isset($_SESSION['utilisateur'])) {
 <html>
 
 <head>
-    <title>Accueil | Ostéopathe Animalier</title>
-    <link rel="stylesheet" type="text/css" href="styles/global.css">
-    <meta name="viewport" content="width:device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+  <title>Tarification | Ostéopathe Animalier</title>
+  <link rel="stylesheet" type="text/css" href="styles/global.css">
+  <link rel="stylesheet" type="text/css" href="styles/tarificationClient.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
 </head>
 
 <body>
-    <?php include_once('includes/header.html') ?>
-    <?php include_once('includes/menuClient.php') ?>
-
+  <?php include_once('includes/header.html') ?>
+  <?php include_once('includes/menuClient.php') ?>
+  <main>
     <table>
       <tr>
         <td>Type de consultation</td>
@@ -36,7 +37,8 @@ if (!isset($_SESSION['utilisateur'])) {
         <td>70€</td>
       </tr>
     </table>
-
+  </main>
+  <?php include_once('includes/footer.html'); ?>
 </body>
-<?php include_once('includes/footer.html')?>
+
 </html>

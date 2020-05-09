@@ -1,0 +1,28 @@
+.infosClient {
+    width: 50%;
+}
+
+.infosClient h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.infosClient table {
+    margin-top: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modifierProfil {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+#modifierProfil .button {
+    margin-top: 20px;
+}
