@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-    header('Location: loginClient.php', true, 301);
+    header('Location: loginAdmin.php', true, 301); // jsp si il faut changer ou pas j'ai juste repris celui d'avant :/
 }
 ?>
 
@@ -17,7 +17,7 @@ if (!isset($_SESSION['utilisateur'])) {
 
 <body>
     <?php include_once('includes/header.html') ?>
-    <?php include_once('includes/menuClient.php') ?>
+    <?php include_once('includes/menuAdmin.php') ?>
 </body>
 <?php include_once('includes/footer.html')?>
 </html>

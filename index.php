@@ -10,12 +10,7 @@
 </head>
 
 <body>
-    <!--Haut de la page-->
-    <header>
-        <h1>Bienvenue</h1>
-    </header>
-    <!--Fin du haut de la page-->
-
+    <?php include_once('includes/header.html') ?>
     <!-- Corps de la page -->
     <main>
         <div class="choixUtilisateur">
@@ -28,5 +23,5 @@
     </main>
     <!-- Fin du corps de la page -->
 </body>
-
+<?php include_once('includes/footer.html')?>
 </html>

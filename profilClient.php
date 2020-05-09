@@ -18,6 +18,11 @@ if (!isset($_SESSION['utilisateur'])) {
 <body>
     <?php include_once('includes/header.html') ?>
     <?php include_once('includes/menuClient.php') ?>
+
+
+    <p><h2>Informations</h2></p>
+        Je sais pas quoi mettre a part username et date inscription  ?
+
 </body>
 <?php include_once('includes/footer.html')?>
 </html>

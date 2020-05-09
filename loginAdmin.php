@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $inputLogin = $_POST['login'];
     $inputPassword = $_POST['mdp'];
 
-    $results = $dbh->query("SELECT utilisateur, motDePasse FROM LOGIN WHERE utilisateur = '$inputLogin' AND motDePasse = '$inputPassword' AND role='user'");
+    $results = $dbh->query("SELECT utilisateur, motDePasse FROM LOGIN WHERE utilisateur = '$inputLogin' AND motDePasse = '$inputPassword' AND role='admin'");
 
     $user = $results->fetch();
     $username = $user['utilisateur'];
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($username == $inputLogin && $password == $inputPassword) {
       session_start();
       $_SESSION['utilisateur'] = $username;
-      header('Location: accueilClient.php');
+      header('Location: accueilAdmin.php');
     } else {
       $error = 'Erreur : Identifiant ou mot de passe invalide.';
     }
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <main>
     <h1>Rentrez vos identifiants :</h1>
     <div class="formConnect">
-      <form action="loginClient.php" method="post">
+      <form action="loginAdmin.php" method="post">
 
         <label for="login">Login</label>
         <input type="text" name="login">

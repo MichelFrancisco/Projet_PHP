@@ -38,15 +38,6 @@ pre {
     text-align: left;
 }
 
-
-/*Permet de surligner sur la barre de navigation sur quelle page nous sommes*/
-
-.active {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-
 /*Va enlever les marges sur les côtés de la page*/
 
 body {
