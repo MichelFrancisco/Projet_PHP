@@ -1,11 +1,5 @@
 <?php
 
-session_start();
-
-if (isset($_SESSION['utilisateur'])) {
-  header('Location: accueilClient.php');
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   require("connexion_local.php");
@@ -14,15 +8,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $inputLogin = $_POST['login'];
     $inputPassword = $_POST['mdp'];
 
-    $results = $dbh->query("SELECT utilisateur, motDePasse FROM LOGIN WHERE utilisateur = '$inputLogin' AND motDePasse = '$inputPassword' AND role='user'");
+    $results = $dbh->query("SELECT utilisateur, motDePasse FROM LOGIN WHERE utilisateur = '$inputLogin' AND motDePasse = '$inputPassword' AND role='admin'");
 
     $user = $results->fetch();
     $username = $user['utilisateur'];
     $password = $user['motDePasse'];
 
     if ($username == $inputLogin && $password == $inputPassword) {
+      session_start();
       $_SESSION['utilisateur'] = $username;
-      header('Location: accueilClient.php');
+      header('Location: accueilAdmin.php');
     } else {
       $error = 'Erreur : Identifiant ou mot de passe invalide.';
     }
@@ -40,7 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="styles/global.css">
   <link rel="stylesheet" type="text/css" href="styles/loginClient.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connexion | Ostéopathe Animalier</title>
 </head>
 
@@ -49,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <main>
     <h1>Rentrez vos identifiants :</h1>
     <div class="formConnect">
-      <form action="loginClient.php" method="post">
+      <form action="loginAdmin.php" method="post">
 
         <label for="login">Login</label>
         <input type="text" name="login">
@@ -73,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <a id="retourAccueil" class="button" href="/">Retour à l'accueil</a>
     </div>
   </main>
-  <?php include_once('includes/footer.html'); ?>
 </body>
+<?php include_once('includes/footer.html')?>
 
 </html>
