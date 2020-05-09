@@ -9,7 +9,7 @@ if (!isset($_SESSION['utilisateur'])) {
 <html>
 
 <head>
-    <title>Accueil | Ostéopathe Animalier</title>
+    <title>Planifier une consultation | Ostéopathe Animalier</title>
     <link rel="stylesheet" type="text/css" href="styles/global.css">
     <meta name="viewport" content="width:device-width, initial-scale=1.0">
     <meta charset="utf-8">

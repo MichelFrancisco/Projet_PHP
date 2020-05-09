@@ -9,7 +9,7 @@ if (!isset($_SESSION['utilisateur'])) {
 <html>
 
 <head>
-    <title>Accueil | Ostéopathe Animalier</title>
+    <title>Tarifs | Ostéopathe Animalier</title>
     <link rel="stylesheet" type="text/css" href="styles/global.css">
     <meta name="viewport" content="width:device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -35,7 +35,8 @@ if (!isset($_SESSION['utilisateur'])) {
     </div>
     <!--Fin de la barre de navigation-->
 
-    <main></main>
+    <main>
+    </main>
 
     <?php include_once('includes/footer.html') ?>
 </body>

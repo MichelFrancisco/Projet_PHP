@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['utilisateur'])) {
+  header('Location: accueilClient.php');
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   require("connexion_local.php");
@@ -15,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $user['motDePasse'];
 
     if ($username == $inputLogin && $password == $inputPassword) {
-      session_start();
       $_SESSION['utilisateur'] = $username;
       header('Location: accueilClient.php');
     } else {
@@ -67,9 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <a id="retourAccueil" class="button" href="/">Retour à l'accueil</a>
     </div>
   </main>
+  <?php include_once('includes/footer.html'); ?>
 </body>
-<?php
-include_once('includes/footer.html');
-?>
 
 </html>

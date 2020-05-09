@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Accueil | Ostéopathe Animalier</title>
+    <title>Bienvenue | Ostéopathe Animalier</title>
     <link rel="stylesheet" type="text/css" href="styles/global.css">
     <link rel="stylesheet" type="text/css" href="styles/index.css">
     <meta name="viewport" content="width:device-width, initial-scale=1.0">
@@ -27,6 +27,8 @@
         </div>
     </main>
     <!-- Fin du corps de la page -->
+
+    <?php include_once('includes/footer.html') ?>
 </body>
 
 </html>

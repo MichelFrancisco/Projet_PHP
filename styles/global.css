@@ -18,7 +18,7 @@ pre {
 
 h1 {
     font-style: normal;
-    font-weigth: bold;
+    font-weight: bold;
 }
 
 h2 {
@@ -46,12 +46,23 @@ pre {
     font-weight: bold;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 
 /*Va enlever les marges sur les côtés de la page*/
 
 body {
     margin: 0;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 
@@ -73,8 +84,7 @@ footer {
     color: black;
     display: flex;
     flex-direction: row;
-    position: absolute;
-    bottom: 0;
+    flex-shrink: 0;
 }
 
 ul {
