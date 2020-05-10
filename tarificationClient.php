@@ -20,23 +20,26 @@ if (!isset($_SESSION['utilisateur'])) {
   <?php include_once('includes/header.html') ?>
   <?php include_once('includes/menuClient.php') ?>
   <main>
-    <table>
-      <tr>
-        <td>Type de consultation</td>
-        <td>Cabinet</td>
-        <td>Hors Cabinet</td>
-      </tr>
-      <tr>
-        <td>Consultation de base</td>
-        <td>15€</td>
-        <td>25€</td>
-      </tr>
-      <tr>
-        <td>Consulation avec manipultaion</td>
-        <td>40€</td>
-        <td>70€</td>
-      </tr>
-    </table>
+    <div class="tarif">
+      <h2>Tarification</h2>
+      <table>
+        <tr>
+          <td>Type de consultation</td>
+          <td>Cabinet</td>
+          <td>Hors Cabinet</td>
+        </tr>
+        <tr>
+          <td>Consultation de base</td>
+          <td>15€</td>
+          <td>25€</td>
+        </tr>
+        <tr>
+          <td>Consulation avec manipultaion</td>
+          <td>40€</td>
+          <td>70€</td>
+        </tr>
+      </table>
+    </div>
   </main>
   <?php include_once('includes/footer.html'); ?>
 </body>

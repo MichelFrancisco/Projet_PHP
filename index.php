@@ -20,11 +20,9 @@
                 <a class="button" href="loginAdmin.php">Ostéopathe</a>
             </div>
         </div>
+        <?php include_once('includes/footer.html') ?>
     </main>
     <!-- Fin du corps de la page -->
-
-    <?php include_once('includes/footer.html') ?>
 </body>
-<?php include_once('includes/footer.html') ?>
 
 </html>

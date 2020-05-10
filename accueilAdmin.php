@@ -19,7 +19,7 @@ if (!isset($_SESSION['utilisateur'])) {
 
 <body>
     <?php include_once('includes/header.html');
-    include_once('includes/menuClient.php');
+    include_once('includes/menuAdmin.php');
     ?>
     <main>
       <h2> Mr Daktari - Ostéopathe/homéopathe pour animaux</h2>
