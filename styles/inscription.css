@@ -17,25 +17,20 @@ main {
     align-items: center;
 }
 
-#modifierProfil {
+#inscription {
     display: flex;
     flex-direction: column;
     margin: 20px 0;
 }
 
-#modifierProfil label {
+#inscription label {
     font-weight: 700;
 }
 
-#modifierProfil input {
+#inscription input {
     margin-bottom: 10px;
 }
 
-#modifierProfil .button {
+#inscription .button {
     margin-top: 20px;
-}
-
-#deconnexion .button{
-  margin-bottom: 20px;
-  width : 100%;
 }

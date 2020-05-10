@@ -18,6 +18,7 @@
             <div class="buttons">
                 <a class="button" href="loginClient.php">Client</a>
                 <a class="button" href="loginAdmin.php">Ostéopathe</a>
+                <a class="button" href="accueilVisiteur.php">Visiteur</a>
             </div>
         </div>
 

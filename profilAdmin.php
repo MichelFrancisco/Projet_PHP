@@ -39,6 +39,9 @@ $admin = $query->fetch();
                 </tr>
             </table>
         </div>
+        <form id="deconnexion" action="deconnexion.php" method="post">
+          <input class='button warning' type='submit' value='Se déconnecter' />
+        </form>
     </main>
 
     <?php include_once('includes/footer.html') ?>

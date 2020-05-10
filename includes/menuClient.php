@@ -12,6 +12,7 @@
         <li><a href="planificationConsult.php">Planifier une consultation</a></li>
         <li><a href="tarificationClient.php">Tarification</a></li>
         <li><a href="suiviConsult.php">Suivi de la consultation</a></li>
+        <li><a href="rdvClient.php">Mes rendez-vous</a></li>
     </ul>
 </nav>
 <!--Fin de la barre de navigation-->

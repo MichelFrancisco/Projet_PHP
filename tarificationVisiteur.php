@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (!isset($_SESSION['utilisateur'])) {
-  header('Location: loginClient.php', true, 301);
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -17,8 +10,7 @@ if (!isset($_SESSION['utilisateur'])) {
 </head>
 
 <body>
-  <?php include_once('includes/header.html') ?>
-  <?php include_once('includes/menuClient.php') ?>
+  <?php include_once('includes/menuVisiteur.php') ?>
   <main>
     <div class="tarif">
       <h2>Tarifs</h2>
