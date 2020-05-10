@@ -13,20 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $type = $_POST['type'];
         $lieu = $_POST['lieu'];
         $date = $_POST['date'] . " " . $_POST['heure'];
-        $reponse = [];
 
-        try {
-            $reponse['type'] = 'success';
-            $reponse['message'] = "Le rendez-vous a bien été modifié !";
-            $modifRdv = $dbh->exec("UPDATE RENDEZ_VOUS SET type='$type', lieu='$lieu', date='$date' WHERE id = '$id'");
-        } catch (Exception $e) {
-            $reponse['type'] = 'error';
-            $reponse['message'] = "Une erreur s'est produite lors de la modification...";
-        }
+        $modifRdv = $dbh->exec("UPDATE RENDEZ_VOUS SET type='$type', lieu='$lieu', date='$date' WHERE id = '$id'");
     }
 }
 $query = $dbh->query("SELECT * FROM RENDEZ_VOUS");
-$rdvs = $query->fetchAll();
 
 ?>
 
@@ -49,17 +40,17 @@ $rdvs = $query->fetchAll();
             <h2>Liste des rendez-vous proposés</h2>
             <table>
                 <tr>
-                    <th colspan="1">ID du rendez-vous</th>
+                    <th colspan="1">ID</th>
                     <th colspan="1">Type</th>
                     <th colspan="1">Lieu</th>
                     <th colspan="3">Date</th>
                 </tr>
-                <?php foreach ($rdvs as $rdv) { ?>
+                <?php while ($ligne_rdv = $query->fetch()) { ?>
                     <tr>
-                        <td colspan="1"><?php echo $rdv['id'] ?></td>
-                        <td colspan="1"><?php echo $rdv['type'] ?></td>
-                        <td colspan="1"><?php echo $rdv['lieu'] ?></td>
-                        <td colspan="3"><?php echo $rdv['date'] ?></td>
+                        <td colspan="1"><?php echo $ligne_rdv['id'] ?></td>
+                        <td colspan="1"><?php echo $ligne_rdv['type'] ?></td>
+                        <td colspan="1"><?php echo $ligne_rdv['lieu'] ?></td>
+                        <td colspan="3"><?php echo $ligne_rdv['date'] ?></td>
                     </tr>
                 <?php } ?>
             </table>
@@ -67,8 +58,8 @@ $rdvs = $query->fetchAll();
             <form id="modifierRdv" action="planningAdmin.php" method="post">
                 <label type="id">ID du rendez-vous à modifier :</label>
                 <select name='id'>
-                    <?php foreach ($rdvs as $rdv) { ?>
-                        <option> <?php echo $rdv['id']; ?></option>
+                    <?php while ($ligne_rdv = $query->fetch()) { ?>
+                        <option> <?php echo $ligne_rdv['id']; ?></option>
                     <?php } ?>
                 </select>
                 <label for="type">Type :</label>
@@ -85,12 +76,9 @@ $rdvs = $query->fetchAll();
                 <input type='date' name='date' />
                 <label for="heure">Heure :</label>
                 <input type='time' name='heure' />
-                <input class='button success' type='submit' name='modifier' value='Modifier...' /></input>
+                <input class='button success' type='submit' name='ajouter' value='Ajouter...' /></input>
             </form>
-        </div>
-        <?php if (isset($reponse)) { ?>
-            <p class="<?php echo $reponse['type']; ?>"><?php echo $reponse['message']; ?></p>
-        <?php } ?>
+
     </main>
     <?php include_once('includes/footer.html') ?>
 </body>

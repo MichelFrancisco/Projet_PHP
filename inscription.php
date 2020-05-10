@@ -21,15 +21,14 @@ if (isset($_POST['inscrire'])){
       if ($_POST['mdp']==$_POST['mdp2']){
         include_once('connexion_local.php');
         try {
-          echo $date;
             $inscription = $dbh->exec("INSERT INTO particuliers (`nom`, `prenom`, `adresse`, `codePostal`, `ville`, `telephone`, `email`) VALUES ('$nom','$prenom','$adresse', '$codep', '$ville','$telephone' ,'$email')");
             $inscription2 = $dbh->exec("INSERT INTO login (`utilisateur`, `motDePasse`, `dateInscription`, `role`, `id_particulier`) VALUES ('$pseudo','$mdp','$date', 'user',(SELECT COUNT(id) from particuliers))");
             $reponse['type'] = 'success';
             $reponse['message'] = "Inscription reussite";
+            header('Location: index.php');
         } catch (Exception $e) {
             $reponse['type'] = 'error';
             $reponse['message'] = "Une erreur s'est produite lors de l'inscription";
-            header('Location: index.php');
         }
       }
       else {
@@ -39,7 +38,7 @@ if (isset($_POST['inscrire'])){
     }
     else {
       $reponse['type'] = 'error';
-      $reponse['message'] = "Veuillez saisir un mot de passe d'au moin 5 caractères !";
+      $reponse['message'] = "Veuillez saisir un mot de passe d'au moins 5 caractères !";
     }
   }
   else {
@@ -85,6 +84,10 @@ if (isset($_POST['inscrire'])){
         <label for='email'>Adresse e-mail :</label>
         <input type='text' name='email' value="" />
         <input class='button success' type='submit' name='inscrire' value='Inscription' />
+        <div class="connect">
+          <h3><a href="loginClient.php">Déja inscris ? Connectez vous !</a><h3>
+        </div>
+
         <?php
         if (isset($reponse)) {
         ?>

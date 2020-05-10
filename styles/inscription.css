@@ -34,3 +34,11 @@ main {
 #inscription .button {
     margin-top: 20px;
 }
+
+.connect p{
+    color : black;
+}
+
+.connect p:hover{
+  text-decoration: underline;
+}

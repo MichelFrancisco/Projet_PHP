@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $reponse['message'] = "L'animal rentré a bien été ajouté !";
     } catch (Exception $e) {
       $reponse['type'] = 'error';
-      $reponse['message'] = "Une erreur s'est produite lors de l'ajout...";
+      $reponse['message'] = "Une erreur s'est produite lors de l'ajout...'";
     }
   }
 }
