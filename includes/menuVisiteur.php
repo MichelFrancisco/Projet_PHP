@@ -2,7 +2,7 @@
 <nav>
     <ul class="navbar">
         <li><a href="accueilVisiteur.php">Accueil</a></li>
-        <li><a href="inscription.php">Prendre rendez-vous</a></li>
+        <li><a href="inscription.php">S'inscrire</a></li>
         <li><a href="tarificationVisiteur.php">Tarification</a></li>
     </ul>
 </nav>

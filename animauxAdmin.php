@@ -4,7 +4,7 @@ if (!isset($_SESSION['utilisateur'])) {
   header('Location: loginAdmin.php', true, 301);
 }
 
-include_once('connexion_local.php');
+include_once('connexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   /* Requête pour ajouter un animal */

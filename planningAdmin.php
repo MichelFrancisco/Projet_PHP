@@ -4,7 +4,7 @@ if (!isset($_SESSION['utilisateur'])) {
     header('Location: loginAdmin.php', true, 301);
 }
 
-include_once('connexion_local.php');
+include_once('connexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     /* Requête pour modifier les informations de l'utilisateur... */
@@ -14,7 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $lieu = $_POST['lieu'];
         $date = $_POST['date'] . " " . $_POST['heure'];
 
-        $modifRdv = $dbh->exec("UPDATE RENDEZ_VOUS SET type='$type', lieu='$lieu', date='$date' WHERE id = '$id'");
+        try {
+            $reponse['type'] = 'success';
+            $reponse['message'] = "Le rendez-vous a bien été modifié !";
+            $modifRdv = $dbh->exec("UPDATE `RENDEZ_VOUS` SET type='$type', lieu='$lieu', date='$date' WHERE id = '$id'");
+        } catch (Exception $e) {
+            $reponse['type'] = 'error';
+            $reponse['message'] = "Une erreur s'est produite lors de la modification...";
+        }
     }
 }
 $query = $dbh->query("SELECT * FROM RENDEZ_VOUS");

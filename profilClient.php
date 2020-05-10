@@ -4,7 +4,7 @@ if (!isset($_SESSION['utilisateur'])) {
     header('Location: loginClient.php', true, 301);
 }
 
-include_once('connexion_local.php');
+include_once('connexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     /* Requête pour modifier les informations de l'utilisateur... */
@@ -88,7 +88,7 @@ $infoUser = $infos->fetch();
                 <input class='button success' type='submit' name='sauvegarder' value='Sauvegarder' />
             </form>
             <form id="deconnexion" action="deconnexion.php" method="post">
-              <input class='button warning' type='submit' value='Se déconnecter' />
+                <input class='button warning' type='submit' value='Se déconnecter' />
             </form>
         </div>
     </main>

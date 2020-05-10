@@ -8,7 +8,7 @@ if (isset($_SESSION['utilisateur'])) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-  require("connexion_local.php");
+  require("connexion.php");
 
   if (!empty($_POST['login']) && !empty($_POST['mdp'])) {
     $inputLogin = $_POST['login'];

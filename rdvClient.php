@@ -3,13 +3,13 @@ session_start();
 if (!isset($_SESSION['utilisateur'])) {
     header('Location: loginClient.php', true, 301);
 }
-include_once('connexion_local.php');
+include_once('connexion.php');
 
 $queryParticulier = $dbh->query("SELECT id_particulier FROM `LOGIN` WHERE utilisateur = '" . $_SESSION['utilisateur'] . "'");
 $user = $queryParticulier->fetch();
 $userId = $user['id_particulier'];
 
-$queryRdv = $dbh->query("SELECT type, lieu, date FROM `rendez_vous` WHERE `id_particulier` = '$userId'");
+$queryRdv = $dbh->query("SELECT type, lieu, date FROM `RENDEZ_VOUS` WHERE `id_particulier` = '$userId'");
 $rdv = $queryRdv->fetch();
 
 ?>
