@@ -100,7 +100,21 @@ caption {
     font-family: sans-serif;
 }
 
-ul {
+
+li a {
+    display: block;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    font-weight: bold;
+}
+
+/* Visuel de la barre du menu */
+
+.navbar {
     font-size: 25px;
     list-style-type: none;
     margin: 0;
@@ -110,23 +124,6 @@ ul {
     justify-content: space-around;
     display: flex;
 }
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    font-weight: bold;
-}
-
 
 /*Disposition des choix des menus déroulant de certains objets de la liste/barre de navigation*/
 

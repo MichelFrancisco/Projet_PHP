@@ -1,0 +1,52 @@
+h2 {
+  text-align: center;
+  padding-top: 1%;
+  font-size: 30px;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1%;
+  height: 50%;
+}
+
+p{
+  text-align: center  ;
+  font-family: "Balsamiq Sans", "Dyno", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.liste {
+   font-family: "Balsamiq Sans", "Dyno", Arial, sans-serif;
+   font-size: 100%;
+   color: black;
+   text-align: center;
+   list-style-type: none;
+}
+
+li{
+  font-family: "Balsamiq Sans", "Dyno", Arial, sans-serif;
+  font-size: 20px;
+}
+
+.citation{
+    color: #1E90FF;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.quote1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 150px;
+    vertical-align: -50px;
+    color: #1E90FF;
+}
+
+.quote2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 100px;
+    vertical-align: -70px;
+    color: #1E90FF;
+}
