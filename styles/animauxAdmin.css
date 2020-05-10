@@ -1,0 +1,25 @@
+.listeAnimaux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listeAnimaux h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin-top: 20px;
+}
+
+#addAnimal {
+    display: flex;
+    flex-direction: column;
+}
+
+#addAnimal .button {
+    margin: 20px;
+}

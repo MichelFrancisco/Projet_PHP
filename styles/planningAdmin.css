@@ -1,15 +1,15 @@
-.infosAdmin {
+.rdv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.infosAdmin h2 {
+.rdv {
     margin-top: 20px;
     text-align: center;
 }
 
-.infosAdmin table {
+.rdv table {
     margin-top: 20px;
 }

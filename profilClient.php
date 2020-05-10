@@ -71,12 +71,19 @@ $infoUser = $infos->fetch();
             </table>
             <h2>Modifier mon profil</h2>
             <form id="modifierProfil" action="profilClient.php" method="post">
+                <label for='nom'>Nom :</label>
                 <input type='text' name='nom' value="<?php echo $infoUser['nom']; ?>" />
+                <label for='prenom'>Prenom :</label>
                 <input type='text' name='prenom' value="<?php echo $infoUser['prenom']; ?>" />
+                <label for='adresse'>Adresse :</label>
                 <input type='text' name='adresse' value="<?php echo $infoUser['adresse']; ?>" />
+                <label for='codep'>Code postal :</label>
                 <input type='text' name='codep' value="<?php echo $infoUser['codePostal']; ?>" />
+                <label for='ville'>Ville :</label>
                 <input type='text' name='ville' value="<?php echo $infoUser['ville']; ?>" />
+                <label for='telephone'>Téléphone :</label>
                 <input type='text' name='telephone' value="<?php echo $infoUser['telephone']; ?>" />
+                <label for='email'>Adresse e-mail :</label>
                 <input type='text' name='email' value="<?php echo $infoUser['email']; ?>" />
                 <input class='button success' type='submit' name='sauvegarder' value='Sauvegarder' />
             </form>

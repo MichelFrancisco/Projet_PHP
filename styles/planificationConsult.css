@@ -15,6 +15,15 @@ main {
     margin: 20px 0;
 }
 
+#planifConsult label {
+    font-weight: 700;
+}
+
+#planifConsult input,
+#planifConsult select {
+    margin-bottom: 10px;
+}
+
 #planifConsult .button {
     margin-top: 20px;
 }

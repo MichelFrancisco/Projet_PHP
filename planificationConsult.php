@@ -7,13 +7,11 @@ if (!isset($_SESSION['utilisateur'])) {
 include_once('connexion_local.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    /* Requête pour modifier les informations de l'utilisateur... */
+    /* Requête ajouter un rendez-vous... */
     if (isset($_POST['type']) && isset($_POST['lieu']) && isset($_POST['date']) && isset($_POST['heure'])) {
         $type = $_POST['type'];
         $lieu = $_POST['lieu'];
         $date = $_POST['date'] . " " . $_POST['heure'];
-
-        // die($type . " " . $lieu . " " . $date);
 
         $queryParticulier = $dbh->query("SELECT id_particulier FROM `LOGIN` WHERE utilisateur = '" . $_SESSION['utilisateur'] . "'");
         $user = $queryParticulier->fetch();
@@ -23,13 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $animal = $queryAnimal->fetch();
         $animalId = $animal['id'];
 
-        $reponse = [];
+        $reponse = []; /* Réponse adaptée à la situation sous forme d'un tableau. */
         try {
             $addConsult = $dbh->exec("INSERT INTO rendez_vous (`type`, `lieu`, `date`, `id_particulier`, `id_animal`) VALUES ('$type','$lieu','$date', '$userId', '$animalId')");
             $reponse['type'] = 'success';
             $reponse['message'] = "Votre rendez-vous a bien été pris en compte !";
         } catch (Exception $e) {
-            die($e);
             $reponse['type'] = 'error';
             $reponse['message'] = "Une erreur s'est produite lors de la prise de rendez-vous";
         }

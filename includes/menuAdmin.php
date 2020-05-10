@@ -9,7 +9,7 @@
                 <a href="deconnexion.php">Déconnexion</a>
             </div>
         </li>
-        <li><a href="#">Planning</a></li>
+        <li><a href="planningAdmin.php">Planning</a></li>
         <li><a href="animauxAdmin.php">Liste des animaux</a></li>
         <li><a href="historiqueAdmin.php">Créer une consultation...</a></li>
     </ul>

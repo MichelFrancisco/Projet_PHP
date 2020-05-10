@@ -23,6 +23,14 @@ main {
     margin: 20px 0;
 }
 
+#modifierProfil label {
+    font-weight: 700;
+}
+
+#modifierProfil input {
+    margin-bottom: 10px;
+}
+
 #modifierProfil .button {
     margin-top: 20px;
 }
