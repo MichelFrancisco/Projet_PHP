@@ -4,7 +4,7 @@ if (!isset($_SESSION['utilisateur'])) {
     header('Location: loginClient.php', true, 301);
 }
 
-include_once('connexion_local.php');
+include_once('connexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     /* Requête ajouter un rendez-vous... */
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $reponse = []; /* Réponse adaptée à la situation sous forme d'un tableau. */
         try {
-            $addConsult = $dbh->exec("INSERT INTO rendez_vous (`type`, `lieu`, `date`, `id_particulier`, `id_animal`) VALUES ('$type','$lieu','$date', '$userId', '$animalId')");
+            $addConsult = $dbh->exec("INSERT INTO `RENDEZ_VOUS` (`type`, `lieu`, `date`, `id_particulier`, `id_animal`) VALUES ('$type','$lieu','$date', '$userId', '$animalId')");
             $reponse['type'] = 'success';
             $reponse['message'] = "Votre rendez-vous a bien été pris en compte !";
         } catch (Exception $e) {

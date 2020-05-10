@@ -4,7 +4,7 @@ if (!isset($_SESSION['utilisateur'])) {
     header('Location: loginAdmin.php', true, 301);
 }
 
-include_once('connexion_local.php');
+include_once('connexion.php');
 /* Requête pour les informations de l'admin... */
 $query = $dbh->query("SELECT * FROM `LOGIN` WHERE utilisateur = '" . $_SESSION['utilisateur'] . "'");
 $admin = $query->fetch();
@@ -40,7 +40,7 @@ $admin = $query->fetch();
             </table>
         </div>
         <form id="deconnexion" action="deconnexion.php" method="post">
-          <input class='button warning' type='submit' value='Se déconnecter' />
+            <input class='button warning' type='submit' value='Se déconnecter' />
         </form>
     </main>
 

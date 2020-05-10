@@ -146,6 +146,31 @@ INSERT INTO `VACCINATIONS` (`maladies`, `date`, `id_animal`, `id_medicament`) VA
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `RENDEZ_VOUS`
+--
+
+CREATE TABLE `RENDEZ_VOUS` (
+  `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(20) NOT NULL,
+  `lieu` VARCHAR(30) NOT NULL,
+  `date` DATETIME NOT NULL,
+  `id_particulier` INT NOT NULL,
+  `id_animal` INT NOT NULL,
+  FOREIGN KEY (`id_particulier`) REFERENCES `PARTICULIERS`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`id_animal`) REFERENCES `ANIMAUX_TRAITES`(`id`) ON DELETE CASCADE
+);
+
+--
+-- Contenu de la table `RENDEZ_VOUS`
+--
+INSERT INTO `RENDEZ_VOUS` (`type`, `lieu`, `date`, `id_particulier`, `id_animal`) VALUES
+('Osthéopathique', 'Cabinet', '2019-12-19 11:30:00', 1, 1),
+('Homéopathique', 'Chez le propriétaire', '2019-12-20 09:00:00', 2, 2),
+('Homéopathique', 'Cabinet', '2019-12-22 10:00:00', 3, 3);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `CONSULTATION`
 --
 
@@ -247,30 +272,6 @@ INSERT INTO `LOGIN` (`utilisateur`, `motDePasse`, `dateInscription`, `role`, `id
 ('donat45', 'jaimeleshaches', '2020-03-07 00:00:00', 'user', 3),
 ('daktari6', 'animaux20', '2019-12-31 18:47:35', 'admin', null);
 
--- --------------------------------------------------------
-
---
--- Structure de la table `RENDEZ_VOUS`
---
-
-CREATE TABLE `RENDEZ_VOUS` (
-  `id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `type` VARCHAR(20) NOT NULL,
-  `lieu` VARCHAR(30) NOT NULL,
-  `date` DATETIME NOT NULL,
-  `id_particulier` INT NOT NULL,
-  `id_animal` INT NOT NULL,
-  FOREIGN KEY (`id_particulier`) REFERENCES `PARTICULIERS`(`id`) ON DELETE CASCADE,
-  FOREIGN KEY (`id_animal`) REFERENCES `ANIMAUX_TRAITES`(`id`) ON DELETE CASCADE
-);
-
---
--- Contenu de la table `RENDEZ_VOUS`
---
-INSERT INTO `RENDEZ_VOUS` (`type`, `lieu`, `date`, `id_particulier`, `id_animal`) VALUES
-('Osthéopathique', 'Cabinet', '2019-12-19 11:30:00', 1, 1),
-('Homéopathique', 'Chez le propriétaire', '2019-12-20 09:00:00', 2, 2),
-('Homéopathique', 'Cabinet', '2019-12-22 10:00:00', 3, 3);
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

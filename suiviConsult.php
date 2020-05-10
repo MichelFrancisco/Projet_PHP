@@ -4,17 +4,17 @@ if (!isset($_SESSION['utilisateur'])) {
     header('Location: loginClient.php', true, 301);
 }
 
-include_once('connexion_local.php');
+include_once('connexion.php');
 
 $queryParticulier = $dbh->query("SELECT id_particulier FROM `LOGIN` WHERE utilisateur = '" . $_SESSION['utilisateur'] . "'");
 $user = $queryParticulier->fetch();
 $userId = $user['id_particulier'];
 
-$queryRdv = $dbh->query("SELECT id FROM `rendez_vous` WHERE `id_particulier` = '$userId'");
+$queryRdv = $dbh->query("SELECT id FROM `RENDEZ_VOUS` WHERE `id_particulier` = '$userId'");
 $rdv = $queryRdv->fetch();
 $rdvId = $rdv['id'];
 
-$queryConsult = $dbh->query("SELECT * FROM `consultation` WHERE `id_rendezvous` = '$rdvId'");
+$queryConsult = $dbh->query("SELECT * FROM `CONSULTATION` WHERE `id_rendezvous` = '$rdvId'");
 $consult = $queryConsult->fetch();
 $consultId = $consult['id'];
 
