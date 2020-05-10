@@ -13,3 +13,10 @@
 .infosAdmin table {
     margin-top: 20px;
 }
+
+
+#deconnexion .button{
+  margin-top: 20%;
+  margin-bottom: 20px;
+  width : 100%;
+}

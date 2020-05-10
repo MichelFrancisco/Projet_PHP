@@ -87,6 +87,9 @@ $infoUser = $infos->fetch();
                 <input type='text' name='email' value="<?php echo $infoUser['email']; ?>" />
                 <input class='button success' type='submit' name='sauvegarder' value='Sauvegarder' />
             </form>
+            <form id="deconnexion" action="deconnexion.php" method="post">
+              <input class='button warning' type='submit' value='Se déconnecter' />
+            </form>
         </div>
     </main>
 
