@@ -244,7 +244,8 @@ CREATE TABLE `LOGIN` (
 INSERT INTO `LOGIN` (`utilisateur`, `motDePasse`, `dateInscription`, `role`, `id_particulier`) VALUES
 ('albert8', 'albert24', '2020-05-01 12:35:00', 'user', 1),
 ('niska93', 'lacite', '2020-01-01 15:15:00', 'user', 2),
-('donat45', 'jaimeleshaches', '2020-03-07 00:00:00', 'user', 3);
+('donat45', 'jaimeleshaches', '2020-03-07 00:00:00', 'user', 3),
+('daktari6', 'animaux20', '2019-12-31 18:47:35', 'admin', null);
 
 -- --------------------------------------------------------
 

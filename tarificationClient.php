@@ -21,7 +21,7 @@ if (!isset($_SESSION['utilisateur'])) {
   <?php include_once('includes/menuClient.php') ?>
   <main>
     <div class="tarif">
-      <h2>Tarification</h2>
+      <h2>Tarifs</h2>
       <table>
         <tr>
           <td>Type de consultation</td>

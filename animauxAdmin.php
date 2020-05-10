@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['utilisateur'])) {
-  header('Location: loginAdmin.php', true, 301); // jsp si il faut changer ou pas j'ai juste repris celui d'avant :/
+  header('Location: loginAdmin.php', true, 301);
 }
 ?>
 

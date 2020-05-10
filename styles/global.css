@@ -100,6 +100,20 @@ caption {
     font-family: sans-serif;
 }
 
+ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 1%;
+    overflow: hidden;
+    background-color: #00BFFF;
+}
+
+li {
+    float: left;
+}
 
 li a {
     display: block;
@@ -111,6 +125,7 @@ li a {
 li a:hover {
     font-weight: bold;
 }
+
 
 /* Visuel de la barre du menu */
 
@@ -124,6 +139,7 @@ li a:hover {
     justify-content: space-around;
     display: flex;
 }
+
 
 /*Disposition des choix des menus déroulant de certains objets de la liste/barre de navigation*/
 

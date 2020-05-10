@@ -10,8 +10,8 @@
             </div>
         </li>
         <li><a href="#">Planning</a></li>
-        <li><a href="animauxAdmin.php">Liste des Animaux</a></li>
-        <li><a href="historiqueAdmin.php">Historique des consultations</a></li>
+        <li><a href="animauxAdmin.php">Liste des animaux</a></li>
+        <li><a href="historiqueAdmin.php">Créer une consultation...</a></li>
     </ul>
 </nav>
 <!--Fin de la barre de navigation-->
