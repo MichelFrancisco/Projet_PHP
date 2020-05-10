@@ -66,14 +66,12 @@ header {
 }
 
 footer {
-    padding: 10px;
+    padding: 1px;
     font-size: 15px;
     text-align: center;
     background-color: #1E90FF;
     color: black;
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
+    display: center;
 }
 
 table {
@@ -103,16 +101,14 @@ caption {
 }
 
 ul {
-    background-color: white;
-}
-
-ul {
     font-size: 25px;
     list-style-type: none;
     margin: 0;
     padding: 1%;
     overflow: hidden;
     background-color: #00BFFF;
+    justify-content: space-around;
+    display: flex;
 }
 
 li {
