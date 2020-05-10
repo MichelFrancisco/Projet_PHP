@@ -23,3 +23,19 @@ table {
 #addAnimal .button {
     margin: 20px;
 }
+
+#addAnimal label {
+    font-weight: 700;
+}
+
+#addAnimal input {
+    margin-bottom: 10px;
+}
+
+#addAnimal select {
+    margin-bottom: 10px;
+}
+
+#addAnimal label {
+    margin-bottom: 5px;
+}

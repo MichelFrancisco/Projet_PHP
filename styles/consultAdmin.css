@@ -1,4 +1,4 @@
-.rdv {
+.consult {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,27 +7,27 @@
     text-align: center;
 }
 
-.rdv h2 {
+.consult h2 {
     margin: 20px;
 }
 
-.rdv table {
+.consult table {
     margin-top: 20px;
 }
 
-#modifierRdv {
+#ajouterConsult {
     display: flex;
     flex-direction: column;
 }
 
-#modifierRdv label {
+#ajouterConsult label {
     font-weight: 700;
 }
 
-#modifierRdv input {
+#ajouterConsult input {
     margin-bottom: 10px;
 }
 
-#modifierRdv select {
+#ajouterConsult select {
     margin-bottom: 10px;
 }
