@@ -1,0 +1,32 @@
+        .consult {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .consult h2 {
+        margin: 20px;
+    }
+    
+    .consult table {
+        margin-top: 20px;
+    }
+    
+    #ajouterConsult {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #ajouterConsult label {
+        font-weight: 700;
+    }
+    
+    #ajouterConsult input {
+        margin-bottom: 10px;
+    }
+    
+    #ajouterConsult select {
+        margin-bottom: 10px;

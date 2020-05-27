@@ -11,7 +11,7 @@
         </li>
         <li><a href="planningAdmin.php">Planning</a></li>
         <li><a href="animauxAdmin.php">Liste des animaux</a></li>
-        <li><a href="historiqueAdmin.php">Créer une consultation...</a></li>
+        <li><a href="consultAdmin.php">Créer une consultation</a></li>
     </ul>
 </nav>
 <!--Fin de la barre de navigation-->

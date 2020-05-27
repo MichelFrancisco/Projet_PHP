@@ -10,7 +10,11 @@
 </head>
 
 <body>
-    <?php include_once('includes/header.html') ?>
+    <!--Haut de la page-->
+    <header>
+        <h1>Bienvenue</h1>
+    </header>
+    <!--Fin du haut de la page-->
     <!-- Corps de la page -->
     <main>
         <div class="choixUtilisateur">

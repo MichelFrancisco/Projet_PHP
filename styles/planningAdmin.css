@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.rdv h2 {
+    margin: 20px;
+}
+
 .rdv {
     margin-top: 20px;
     text-align: center;
@@ -12,4 +16,21 @@
 
 .rdv table {
     margin-top: 20px;
+}
+
+#modifierRdv {
+    display: flex;
+    flex-direction: column;
+}
+
+#modifierRdv label {
+    font-weight: 700;
+}
+
+#modifierRdv input {
+    margin-bottom: 10px;
+}
+
+#modifierRdv select {
+    margin-bottom: 10px;
 }

@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
       </form>
 
-      <a id="retourAccueil" class="button" href="/">Retour à l'accueil</a>
+      <a id="retourAccueil" class="button" href="index.php">Retour à l'accueil</a>
     </div>
   </main>
   <?php include_once('includes/footer.html'); ?>
